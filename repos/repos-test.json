@@ -10,10 +10,10 @@
   "withKernelSU": true,
   "toolchains": [
     {
-        "repo": "https://github.com/SlackerState/kernel_bulid",
-        "branch": "main",
-        "name": "tools"
-        "binPath": ["./bin"]
+      "repo": "https://github.com/SlackerState/kernel_bulid",
+      "branch": "main",
+      "name": "tools"
+      "binPath": ["./bin"]
     },
   ],
   "ccache": false,
