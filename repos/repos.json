@@ -1,1 +1,35 @@
-[]
+[
+  {
+  "kernelSource": {
+    "name": "PixelExperience",
+    "repo": "https://github.com/PixelExperience-Devices/kernel_xiaomi_phoenix",
+    "branch": "eleven",
+    "device": "phoenix",
+    "defconfig": "vendor/phoenix_defconfig"
+  },
+  "withKernelSU": true,
+  "toolchains": [
+    {
+      "repo": "https://github.com/SreekanthPalakurthi/Clang-dumpyard",
+      "branch": "11.0.4",
+      "name": "Clang-dumpyard",
+      "binPath": ["./bin"]
+    }
+  ],
+  "ccache": false,
+"params": {
+  "ARCH": "arm64",
+  "CC": "clang",
+  "externalCommand": {
+    "CLANG_TRIPLE": "aarch64-linux-gnu-",
+    "CROSS_COMPILE": "proton-clang/bin/aarch64-linux-gnu-",
+    "CROSS_COMPILE_ARM32": "proton-clang/bin/arm-linux-gnueabi-"
+  },
+  "AnyKernel3": {
+    "use": false,
+    "release": false,
+    "repo": "",
+    "branch": ""
+  }
+}
+]
