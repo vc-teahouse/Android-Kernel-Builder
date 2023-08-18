@@ -29,8 +29,8 @@
   "AnyKernel3": {
     "use": false,
     "release": false,
-    "repo": "",
-    "branch": ""
+    "repo": "https://github.com/luyanci/AnyKernel3",
+    "branch": "master"
   }
 }
 ]
