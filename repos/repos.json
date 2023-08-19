@@ -5,7 +5,7 @@
     "repo": "https://github.com/PixelExperience-Devices/kernel_xiaomi_phoenix",
     "branch": "eleven",
     "device": "phoenix",
-    "defconfig": "vendor/phoenix_defconfig"
+    "defconfig": "vendor/phoenix_ztc1997_defconfig"
   },
   "withKernelSU": true,
   "toolchains": [
