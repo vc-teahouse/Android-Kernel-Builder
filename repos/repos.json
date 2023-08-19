@@ -1,61 +1,40 @@
 [
   {
   "kernelSource": {
-    "name": "MIUI",
-    "repo": "https://github.com/SlackerState/android_kernel_xiaomi_sm6150",
-    "branch": "phoenix-r-oss",
-    "device": "phoenix_ztc1997",
-    "defconfig": "vendor/phoenix_ztc1997_defconfig"
+    "name": "miui-k40",
+    "repo": "https://github.com/Rohail33/Realking_kernel_sm8250",
+    "branch": "base",
+    "device": "alioth",
+    "defconfig": "alioth_defconfig"
   },
   "withKernelSU": true,
   "toolchains": [
-    {
-      "repo": "https://github.com/SlackerState/kernel_bulid",
-      "branch": "main",
-      "name": "clang",
-      "binPath": ["toolclang/clang-r428724/bin"]
-    },
-    {
-      "repo": "https://github.com/SlackerState/kernel_bulid",
-      "branch": "main",
-      "name": "gcc",
-      "binPath": ["toolgcc/bin"]
-    },
-    {
-      "repo": "https://github.com/SlackerState/kernel_bulid",
-      "branch": "main",
-      "name": "dtc",
-      "binPath": ["./"]
-    },
-    {
-      "repo": "https://github.com/SlackerState/kernel_bulid",
-      "branch": "main",
-      "name": "gcc-arm",
-      "binPath": ["toolgcc/arm/bin"]
-    }
-  ],
+  {
+    "repo": "https://gitlab.com/ThankYouMario/android_prebuilts_clang-standalone/",
+    "branch": "11",
+    "name": "clang",
+    "binPath": ["bin"]
+  },
+  {
+    "repo": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
+    "branch": "master",
+    "name": "gas",
+    "binPath": ["bin"]
+  }
+],
   "ccache": false,
-  "params": {
-    "ARCH": "arm64",
-    "CC": "clang",
-    "externalCommand": {
-      "CROSS_COMPILE": "aarch64-linux-android-",
-      "CROSS_COMPILE_ARM32": "arm-linux-androideabi-",
-      "CROSS_COMPILE_COMPAT":"",
-      "CLANG_TRIPLE": "aarch64-linux-gnu-",
-      "AR": "llvm-ar",
-      "HOSTCC":"gcc",
-      "HOSTCXX":"clang++",
-      "NM":"llvm-nm" ,
-      "OBJCOPY":"llvm-objcopy",
-      "OBJDUMP":"llvm-objdump",
-      "STRIP":"llvm-strip",
-      "LD":"ld.lld",
-      "DTC_EXT":"dtc"
-    }
+"params": {
+  "ARCH": "arm64",
+  "CC": "clang",
+  "externalCommand": {
+    "CLANG_TRIPLE": "aarch64-linux-gnu-",
+    "CROSS_COMPILE": "aarch64-linux-gnu-",
+    "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
+    "CROSS_COMPILE_COMPAT": "arm-linux-gnueabi-"
+  }
   },
   "AnyKernel3": {
-    "use": true,
+    "use": false,
     "release": false,
     "repo": "https://github.com/luyanci/AnyKernel3",
     "branch": "master"
