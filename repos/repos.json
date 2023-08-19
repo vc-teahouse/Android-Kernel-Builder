@@ -5,7 +5,7 @@
     "repo": "https://github.com/PixelExperience-Devices/kernel_xiaomi_phoenix",
     "branch": "eleven",
     "device": "phoenix",
-    "defconfig": "vendor/phoenix_ztc1997_defconfig"
+    "defconfig": "vendor/phoenix_defconfig"
   },
   "withKernelSU": true,
   "toolchains": [
@@ -71,15 +71,7 @@
       "CROSS_COMPILE": "aarch64-linux-gnu-",
       "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
       "CROSS_COMPILE_COMPAT": "arm-linux-gnueabi-",
-      "CLANG_TRIPLE": "aarch64-linux-gnu-",
-      "AR": "",
-      "HOSTCXX":"",
-      "NM":"" ,
-      "OBJCOPY":"",
-      "OBJDUMP":"",
-      "STRIP":"",
-      "LD":"",
-      "DTC_EXT":""
+      "CLANG_TRIPLE": "aarch64-linux-gnu-"
     }
   },
   "AnyKernel3": {
@@ -95,7 +87,7 @@
     "repo": "https://github.com/SlackerState/android_kernel_xiaomi_sm6150",
     "branch": "phoenix-r-oss",
     "device": "phoenix_ztc1997",
-    "defconfig": "vendor/phoenix_defconfig"
+    "defconfig": "vendor/phoenix_ztc1997_defconfig"
   },
   "withKernelSU": false,
   "toolchains": [
