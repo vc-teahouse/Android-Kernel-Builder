@@ -39,5 +39,54 @@
     "repo": "https://github.com/luyanci/AnyKernel3",
     "branch": "master"
   }
+},
+  {
+  "kernelSource": {
+    "name": "redcliff",
+    "repo": "https://github.com/SlackerState/android_kernel_xiaomi_sm6150",
+    "branch": "redcliff",
+    "device": "phoenix",
+    "defconfig": "phoenix_defconfig"
+  },
+  "withKernelSU": true,
+  "toolchains": [
+    {
+      "repo": "https://gitlab.com/ThankYouMario/android_prebuilts_clang-standalone/",
+      "branch": "11",
+      "name": "clang",
+      "binPath": [bin]
+    },
+    {
+      "repo": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
+      "branch": "master",
+      "name": "gas"
+      "binPath": [bin]
+    }
+  ],
+  "ccache": false,
+  "params": {
+    "ARCH": "arm64",
+    "CC": "clang",
+    "externalCommand": {
+      "CROSS_COMPILE": "aarch64-linux-gnu-",
+      "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
+      "CROSS_COMPILE_COMPAT": "arm-linux-gnueabi-",
+      "CLANG_TRIPLE": "aarch64-linux-gnu-",
+      "AR": "",
+      "HOSTCXX":"",
+      "NM":"" ,
+      "OBJCOPY":"",
+      "OBJDUMP":"",
+      "STRIP":"",
+      "LD":"",
+      "DTC_EXT":""
+    }
+  },
+  "AnyKernel3": {
+    "use": true,
+    "release": false,
+    "repo": "https://github.com/luyanci/AnyKernel3",
+    "branch": "master"
+  }
 }
 ]
