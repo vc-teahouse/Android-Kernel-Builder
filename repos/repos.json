@@ -18,7 +18,7 @@
     {
       "repo": "https://github.com/SreekanthPalakurthi/Clang-dumpyard",
       "branch": "gcc64",
-      "name": "Clang-dumpyard",
+      "name": "gcc",
       "binPath": ["./bin"]
     }
   ],
