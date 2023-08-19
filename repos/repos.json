@@ -50,18 +50,18 @@
   },
   "withKernelSU": true,
   "toolchains": [
-    {
-      "repo": "https://gitlab.com/ThankYouMario/android_prebuilts_clang-standalone/",
-      "branch": "11",
-      "name": "clang",
-      "binPath": ["bin"]
-    },
-    {
-      "repo": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
-      "branch": "master",
-      "name": "gas"
-      "binPath": ["bin"]
-    }
+  {
+    "repo": "https://gitlab.com/ThankYouMario/android_prebuilts_clang-standalone/",
+    "branch": "11",
+    "name": "clang",
+    "binPath": ["bin"]
+  },
+  {
+    "repo": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
+    "branch": "master",
+    "name": "gas"
+    "binPath": ["bin"]
+  }
   ],
   "ccache": false,
   "params": {
