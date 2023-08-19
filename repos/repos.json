@@ -16,7 +16,8 @@
     "binPath": ["bin"]
   },
   {
-    "url": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
+    "repo": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
+    "branch": "master",
     "name": "gas",
     "binPath": ["bin"]
   }
