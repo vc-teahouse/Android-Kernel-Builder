@@ -1,1 +1,32 @@
-[]
+[
+  {
+  "kernelSource": {
+    "name": "",
+    "repo": "",
+    "branch": "",
+    "device": "",
+    "defconfig": ""
+  },
+  "withKernelSU": false,
+  "toolchains": [
+    {
+      "repo": "",
+      "branch": "",
+      "name": "",
+      "binPath": []
+    }
+  ],
+  "ccache": false,
+  "params": {
+    "ARCH": "",
+    "CC": "",
+    "externalCommand": {}
+  },
+  "AnyKernel3": {
+    "use": false,
+    "release": false,
+    "repo": "",
+    "branch": ""
+  }
+}
+]
