@@ -5,7 +5,7 @@
     "repo": "https://github.com/SlackerState/android_kernel_xiaomi_sm6150",
     "branch": "phoenix-r-oss",
     "device": "phoenix_ztc1997",
-    "defconfig": ""
+    "defconfig": "vendor/phoenix_defconfig"
   },
   "withKernelSU": false,
   "toolchains": [
