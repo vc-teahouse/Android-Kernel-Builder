@@ -7,7 +7,7 @@
     "device": "phoenix_ztc1997",
     "defconfig": "vendor/phoenix_ztc1997_defconfig"
   },
-  "withKernelSU": false,
+  "withKernelSU": true,
   "toolchains": [
     {
       "repo": "https://github.com/SreekanthPalakurthi/Clang-dumpyard",
