@@ -10,22 +10,16 @@
   "withKernelSU": true,
   "toolchains": [
     {
-      "repo": "https://github.com/SreekanthPalakurthi/Clang-dumpyard",
-      "branch": "11.0.4",
+      "repo": "https://github.com/SlackerState/kernel_bulid",
+      "branch": "main",
       "name": "clang",
-      "binPath": ["bin"]
+      "binPath": ["toolclang/clang-r428724/bin"]
     },
     {
-      "repo": "https://github.com/SreekanthPalakurthi/Clang-dumpyard",
-      "branch": "gcc32",
-      "name": "gcc32",
-      "binPath": ["bin"]
-    },
-    {
-      "repo": "https://github.com/SreekanthPalakurthi/Clang-dumpyard",
-      "branch": "gcc64",
-      "name": "gcc64",
-      "binPath": ["bin"]
+      "repo": "https://github.com/SlackerState/kernel_bulid",
+      "branch": "main",
+      "name": "gcc",
+      "binPath": ["toolgcc/bin"]
     }
   ],
   "ccache": false,
