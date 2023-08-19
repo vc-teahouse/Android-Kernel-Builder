@@ -8,7 +8,7 @@
     "defconfig": "vendor/phoenix_defconfig"
   },
   "withKernelSU": true,
-  "toolchains": 
+  "toolchains": [
   {
     "repo": "https://gitlab.com/ThankYouMario/android_prebuilts_clang-standalone/",
     "branch": "11",
@@ -20,8 +20,7 @@
     "name": "gcc",
     "binPath": ["bin"]
   }
-]
-  ],
+],
   "ccache": false,
 "params": {
   "ARCH": "arm64",
