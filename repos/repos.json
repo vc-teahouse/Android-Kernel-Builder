@@ -24,6 +24,12 @@
     {
       "repo": "https://github.com/SlackerState/kernel_bulid",
       "branch": "main",
+      "name": "dtc",
+      "binPath": ["./"]
+    },
+    {
+      "repo": "https://github.com/SlackerState/kernel_bulid",
+      "branch": "main",
       "name": "gcc-arm",
       "binPath": ["toolgcc/arm/bin"]
     }
