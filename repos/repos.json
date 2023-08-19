@@ -27,8 +27,8 @@
   "CC": "clang",
   "externalCommand": {
     "CLANG_TRIPLE": "aarch64-linux-gnu-",
-    "CROSS_COMPILE": "proton-clang/bin/aarch64-linux-gnu-",
-    "CROSS_COMPILE_ARM32": "proton-clang/bin/arm-linux-gnueabi-"
+    "CROSS_COMPILE": "aarch64-linux-gnu-",
+    "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-"
   }
   },
   "AnyKernel3": {
