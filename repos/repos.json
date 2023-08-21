@@ -10,10 +10,9 @@
   "withKernelSU": true,
   "toolchains": [
     {
-      "repo": "https://github.com/luyanci/kernel_bulid",
-      "branch": "clang",
+      "url": "https://github.com/ZyCromerZ/Clang/releases/download/11.1.0-20220724-release/Clang-11.1.0-20220724.tar.gz",
       "name": "clang",
-      "binPath": ["toolclang/clang-r428724/bin"]
+      "binPath": ["bin"]
     },
     {
       "repo": "https://github.com/luyanci/kernel_bulid",
