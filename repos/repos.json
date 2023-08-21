@@ -22,7 +22,7 @@
     "binPath": ["bin"]
   }
 ],
-  "ccache": false,
+  "ccache": true,
 "params": {
   "ARCH": "arm64",
   "CC": "clang",
@@ -63,7 +63,7 @@
     "binPath": ["bin"]
   }
   ],
-  "ccache": false,
+  "ccache": true,
   "params": {
     "ARCH": "arm64",
     "CC": "clang",
@@ -116,7 +116,7 @@
       "binPath": ["toolgcc/arm/bin"]
     }
   ],
-  "ccache": false,
+  "ccache": true,
   "params": {
     "ARCH": "arm64",
     "CC": "clang",
