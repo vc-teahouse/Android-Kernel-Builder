@@ -1,36 +1,18 @@
 [
  {
   "kernelSource": {
-    "name": "MIUI",
-    "repo": "https://github.com/SlackerState/android_kernel_xiaomi_sm6150",
-    "branch": "phoenix-r-oss",
-    "device": "phoenix_ztc1997",
-    "defconfig": "vendor/phoenix_ztc1997_defconfig"
+    "name": "k60-test",
+    "repo": "https://github.com/LowTension/android_kernel_xiaomi_sm8475",
+    "branch": "main",
+    "device": "mondrian",
+    "defconfig": "vendor/mondrian_defconfig"
   },
   "withKernelSU": true,
   "toolchains": [
     {
-      "url": "https://github.com/ZyCromerZ/Clang/releases/download/11.1.0-20220724-release/Clang-11.1.0-20220724.tar.gz",
+      "url": "https://github.com/ZyCromerZ/Clang/releases/download/18.0.0-20230904-release/Clang-18.0.0-20230904.tar.gz",
       "name": "clang",
       "binPath": ["bin"]
-    },
-    {
-      "repo": "https://github.com/luyanci/kernel_bulid",
-      "branch": "gcc",
-      "name": "gcc",
-      "binPath": ["toolgcc/bin"]
-    },
-    {
-      "repo": "https://github.com/luyanci/kernel_bulid",
-      "branch": "dtc",
-      "name": "dtc",
-      "binPath": ["./"]
-    },
-    {
-      "repo": "https://github.com/luyanci/kernel_bulid",
-      "branch": "gcc",
-      "name": "gcc-arm",
-      "binPath": ["toolgcc/arm/bin"]
     }
   ],
   "ccache": false,
@@ -38,19 +20,10 @@
     "ARCH": "arm64",
     "CC": "clang",
     "externalCommand": {
-      "CROSS_COMPILE": "aarch64-linux-android-",
-      "CROSS_COMPILE_ARM32": "arm-linux-androideabi-",
-      "CROSS_COMPILE_COMPAT":"",
+      "CROSS_COMPILE": "aarch64-linux-gnu-",
+      "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
+      "CROSS_COMPILE_COMPAT":"arm-linux-gnueabi-",
       "CLANG_TRIPLE": "aarch64-linux-gnu-",
-      "AR": "llvm-ar",
-      "HOSTCC":"gcc",
-      "HOSTCXX":"clang++",
-      "NM":"llvm-nm" ,
-      "OBJCOPY":"llvm-objcopy",
-      "OBJDUMP":"llvm-objdump",
-      "STRIP":"llvm-strip",
-      "LD":"ld.lld",
-      "DTC_EXT":"dtc"
     }
   },
   "AnyKernel3": {
