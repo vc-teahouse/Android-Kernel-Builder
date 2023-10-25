@@ -24,14 +24,14 @@
       "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
       "CROSS_COMPILE_COMPAT":"arm-linux-gnueabi-",
       "CLANG_TRIPLE": "aarch64-linux-gnu-",
-      "AR": "llvm-ar", 
-      "HOSTCC":"gcc", 
-      "HOSTCXX":"clang++", 
-      "NM":"llvm-nm" , 
-      "OBJCOPY":"llvm-objcopy", 
-      "OBJDUMP":"llvm-objdump", 
-      "STRIP":"llvm-strip", 
-      "LD":"ld.lld"
+      "AR": "clang/bin/llvm-ar", 
+      "HOSTCC":"clang/bin/gcc", 
+      "HOSTCXX":"clang/bin/clang++", 
+      "NM":"clang/bin/llvm-nm" , 
+      "OBJCOPY":"clang/bin/llvm-objcopy", 
+      "OBJDUMP":"clang/bin/llvm-objdump", 
+      "STRIP":"clang/bin/llvm-strip", 
+      "LD":"clang/bin/ld.lld"
     }
   },
   "AnyKernel3": {
