@@ -1,7 +1,7 @@
 [
  {
   "kernelSource": {
-    "name": "k60-test",
+    "name": "parabox",
     "repo": "https://github.com/LowTension/android_kernel_xiaomi_sm8475",
     "branch": "main",
     "device": "mondrian",
