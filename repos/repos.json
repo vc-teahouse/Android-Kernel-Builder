@@ -22,7 +22,7 @@
     "externalCommand": {
       "CROSS_COMPILE": "aarch64-linux-gnu-",
       "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
-      "AS": "llvm-as"
+      "AS": "llvm-as",
       "AR": "llvm-ar", 
       "NM":"llvm-nm" , 
       "OBJCOPY":"llvm-objcopy", 
