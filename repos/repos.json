@@ -23,8 +23,6 @@
       "CROSS_COMPILE": "aarch64-linux-gnu-",
       "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
       "AR": "llvm-ar", 
-      "HOSTCC":"gcc", 
-      "HOSTCXX":"clang++", 
       "NM":"llvm-nm" , 
       "OBJCOPY":"llvm-objcopy", 
       "OBJDUMP":"llvm-objdump", 
