@@ -7,7 +7,7 @@
     "device": "phoenix",
     "defconfig": "phoenix_defconfig"
   },
-  "withKernelSU": true,
+  "withKernelSU": false,
   "toolchains": [
     {
       "url": "https://github.com/ZyCromerZ/Clang/releases/download/18.0.0-20230904-release/Clang-18.0.0-20230904.tar.gz",
