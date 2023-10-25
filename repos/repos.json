@@ -1,10 +1,10 @@
 [
  {
   "kernelSource": {
-    "name": "parabox",
-    "repo": "https://github.com/LowTension/android_kernel_xiaomi_sm8475",
-    "branch": "main",
-    "device": "mondrian",
+    "name": "paradox",
+    "repo": "https://github.com/Pzqqt/android_kernel_xiaomi_sm6150-1",
+    "branch": "Paradox-v6.8",
+    "device": "phoenix",
     "defconfig": "vendor/mondrian_defconfig"
   },
   "withKernelSU": true,
