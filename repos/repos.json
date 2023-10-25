@@ -10,7 +10,7 @@
   "withKernelSU": false,
   "toolchains": [
     {
-      "url": "https://github.com/ZyCromerZ/Clang/releases/download/18.0.0-20230904-release/Clang-18.0.0-20230904.tar.gz",
+      "url": "https://github.com/ZyCromerZ/Clang/releases/download/12.0.1-20230207-release/Clang-12.0.1-20230207.tar.gz",
       "name": "clang",
       "binPath": ["bin"]
     }
