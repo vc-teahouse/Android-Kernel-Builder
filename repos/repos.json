@@ -32,13 +32,13 @@
     "externalCommand": {
       "CROSS_COMPILE": "gcc-arm64/arm-gnu-toolchain-12.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-",
       "CROSS_COMPILE_ARM32": "gcc-arm/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-",
-      "AS": "llvm-as",
-      "AR": "llvm-ar", 
-      "NM":"llvm-nm" , 
-      "OBJCOPY":"llvm-objcopy", 
-      "OBJDUMP":"llvm-objdump", 
-      "STRIP":"llvm-strip", 
-      "LD":"ld.lld"
+      "AS": "clang/bin/llvm-as",
+      "AR": "clang/bin/llvm-ar", 
+      "NM":"clang/bin/llvm-nm" , 
+      "OBJCOPY":"clang/bin/llvm-objcopy", 
+      "OBJDUMP":"clang/bin/llvm-objdump", 
+      "STRIP":"clang/bin/llvm-strip", 
+      "LD":"clang/bin/ld.lld"
     }
   },
   "AnyKernel3": {
