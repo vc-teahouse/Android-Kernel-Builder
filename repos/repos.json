@@ -28,7 +28,7 @@
       "OBJCOPY":"clang/bin/llvm-objcopy", 
       "OBJDUMP":"clang/bin/llvm-objdump", 
       "STRIP":"clang/bin/llvm-strip", 
-      "LD":"clang/bin/ld.lld"
+      "LD":"clang/bin/ld.lld",
       "LTO": "thin"
     }
   },
