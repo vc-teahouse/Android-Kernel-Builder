@@ -29,6 +29,7 @@
       "OBJDUMP":"clang/bin/llvm-objdump", 
       "STRIP":"clang/bin/llvm-strip", 
       "LD":"clang/bin/ld.lld"
+      "LTO": "thin"
     }
   },
   "AnyKernel3": {
