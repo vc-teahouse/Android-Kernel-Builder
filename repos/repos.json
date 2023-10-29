@@ -32,7 +32,7 @@
        "OBJDUMP":"tool/toolclang/clang-r428724/bin/llvm-objdump", 
        "STRIP":"tool/toolclang/clang-r428724/bin/llvm-strip", 
        "LD":"tool/toolclang/clang-r428724/bin/ld.lld", 
-       "DTC_EXT":"dtc" 
+       "DTC_EXT":"tool/dtc" 
      } 
    }, 
    "AnyKernel3": { 
