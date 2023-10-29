@@ -17,7 +17,7 @@
      }, 
      { 
        "repo": "https://github.com/luyanci/kernel_bulid", 
-       "branch": "main", 
+       "branch": "gcc", 
        "name": "tool", 
        "binPath": ["./"] 
      }
