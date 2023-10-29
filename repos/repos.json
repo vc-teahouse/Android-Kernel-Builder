@@ -2,7 +2,7 @@
  {
   "kernelSource": {
     "name": "MIUI",
-    "repo": "https://github.com/SlackerState/android_kernel_xiaomi_sm6150",
+    "repo": "https://github.com/ztc1997/android_kernel_xiaomi_sm6150",
     "branch": "phoenix-r-oss",
     "device": "phoenix_ztc1997",
     "defconfig": "vendor/phoenix_ztc1997_defconfig"
@@ -20,12 +20,6 @@
       "branch": "gcc",
       "name": "gcc",
       "binPath": ["toolgcc/bin"]
-    },
-    {
-      "repo": "https://github.com/luyanci/kernel_bulid",
-      "branch": "dtc",
-      "name": "dtc",
-      "binPath": ["./"]
     },
     {
       "repo": "https://github.com/luyanci/kernel_bulid",
@@ -50,8 +44,7 @@
       "OBJCOPY":"llvm-objcopy",
       "OBJDUMP":"llvm-objdump",
       "STRIP":"llvm-strip",
-      "LD":"ld.lld",
-      "DTC_EXT":"dtc"
+      "LD":"ld.lld"
     }
   },
   "AnyKernel3": {
