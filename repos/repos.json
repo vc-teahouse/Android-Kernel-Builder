@@ -11,35 +11,41 @@
    "toolchains": [ 
      { 
        "repo": "https://github.com/luyanci/kernel_bulid", 
+       "branch": "clang", 
+       "name": "clang", 
+       "binPath": ["toolclang/clang-r428724/bin"] 
+     }, 
+     { 
+       "repo": "https://github.com/luyanci/kernel_bulid", 
        "branch": "main", 
        "name": "tool", 
        "binPath": ["./"] 
-     }
    ], 
-   "ccache": false, 
+   "ccache": true, 
    "params": { 
      "ARCH": "arm64", 
      "CC": "clang", 
      "externalCommand": { 
        "CROSS_COMPILE": "tool/toolgcc/bin/aarch64-linux-android-", 
        "CROSS_COMPILE_ARM32": "tool/toolgcc/arm/bin/arm-linux-androideabi-", 
+       "CROSS_COMPILE_COMPAT":"", 
        "CLANG_TRIPLE": "aarch64-linux-gnu-", 
-       "AR": "tool/toolclang/clang-r428724/bin/llvm-ar", 
+       "AR": "llvm-ar", 
        "HOSTCC":"gcc", 
-       "HOSTCXX":"tool/toolclang/clang-r428724/bin/clang++", 
+       "HOSTCXX":"clang++", 
        "NM":"llvm-nm" , 
-       "OBJCOPY":"tool/toolclang/clang-r428724/bin/llvm-objcopy", 
-       "OBJDUMP":"tool/toolclang/clang-r428724/bin/llvm-objdump", 
-       "STRIP":"tool/toolclang/clang-r428724/bin/llvm-strip", 
-       "LD":"tool/toolclang/clang-r428724/bin/ld.lld", 
+       "OBJCOPY":"llvm-objcopy", 
+       "OBJDUMP":"llvm-objdump", 
+       "STRIP":"llvm-strip", 
+       "LD":"ld.lld", 
        "DTC_EXT":"tool/dtc" 
      } 
    }, 
    "AnyKernel3": { 
      "use": true, 
-     "release": true, 
+     "release": false, 
      "repo": "https://github.com/luyanci/AnyKernel3", 
      "branch": "master" 
    } 
-}
+ }
 ]
