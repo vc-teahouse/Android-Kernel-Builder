@@ -1,13 +1,13 @@
 [
  {
   "kernelSource": {
-    "name": "pure-phoenix",
+    "name": "Pure-phoenix",
     "repo": "https://github.com/Pzqqt/android_kernel_xiaomi_sm6150-1",
     "branch": "pure-phoenix",
     "device": "phoenix",
     "defconfig": "phoenix_defconfig"
   },
-  "withKernelSU": false,
+  "withKernelSU": true,
   "toolchains": [
     { 
        "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/clang-r498229b.tar.gz", 
