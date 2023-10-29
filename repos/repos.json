@@ -25,20 +25,20 @@
    "ccache": false, 
    "params": { 
      "ARCH": "arm64", 
-     "CC": "clang", 
+     "CC": "clang/toolclang/clang-r428724/bin/clang", 
      "externalCommand": { 
        "CROSS_COMPILE": "tool/toolgcc/bin/aarch64-linux-android-", 
        "CROSS_COMPILE_ARM32": "tool/toolgcc/arm/bin/arm-linux-androideabi-", 
        "CROSS_COMPILE_COMPAT":"", 
        "CLANG_TRIPLE": "aarch64-linux-gnu-", 
-       "AR": "llvm-ar", 
+       "AR": "clang/toolclang/clang-r428724/bin/llvm-ar", 
        "HOSTCC":"gcc", 
-       "HOSTCXX":"clang++", 
-       "NM":"llvm-nm" , 
-       "OBJCOPY":"llvm-objcopy", 
-       "OBJDUMP":"llvm-objdump", 
-       "STRIP":"llvm-strip", 
-       "LD":"ld.lld", 
+       "HOSTCXX":"clang/toolclang/clang-r428724/bin/clang++", 
+       "NM":"clang/toolclang/clang-r428724/bin/llvm-nm" , 
+       "OBJCOPY":"clang/toolclang/clang-r428724/bin/llvm-objcopy", 
+       "OBJDUMP":"clang/toolclang/clang-r428724/bin/llvm-objdump", 
+       "STRIP":"clang/toolclang/clang-r428724/bin/llvm-strip", 
+       "LD":"clang/toolclang/clang-r428724/bin/ld.lld", 
        "DTC_EXT":"tool/dtc" 
      } 
    }, 
