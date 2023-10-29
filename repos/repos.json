@@ -25,7 +25,7 @@
        "CROSS_COMPILE_ARM32": "tool/toolgcc/arm/bin/arm-linux-androideabi-", 
        "CLANG_TRIPLE": "aarch64-linux-gnu-", 
        "AR": "tool/toolclang/clang-r428724/bin/llvm-ar", 
-       "HOSTCC":"tool/toolclang/clang-r428724/bin/gcc", 
+       "HOSTCC":"gcc", 
        "HOSTCXX":"tool/toolclang/clang-r428724/bin/clang++", 
        "NM":"tool/toolclang/clang-r428724/bin/llvm-nm" , 
        "OBJCOPY":"tool/toolclang/clang-r428724/bin/llvm-objcopy", 
