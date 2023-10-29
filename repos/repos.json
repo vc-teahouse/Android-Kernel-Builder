@@ -3,7 +3,7 @@
   "kernelSource": {
     "name": "EvolutionX",
     "repo": "https://github.com/jaymistry258/kernel_xiaomi_phoenix",
-    "branch": "paradox-rerebase",
+    "branch": "alza-su",
     "device": "phoenix",
     "defconfig": "phoenix_defconfig"
   },
