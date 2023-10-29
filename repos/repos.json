@@ -27,7 +27,7 @@
        "AR": "tool/toolclang/clang-r428724/bin/llvm-ar", 
        "HOSTCC":"gcc", 
        "HOSTCXX":"tool/toolclang/clang-r428724/bin/clang++", 
-       "NM":"tool/toolclang/clang-r428724/bin/llvm-nm" , 
+       "NM":"llvm-nm" , 
        "OBJCOPY":"tool/toolclang/clang-r428724/bin/llvm-objcopy", 
        "OBJDUMP":"tool/toolclang/clang-r428724/bin/llvm-objdump", 
        "STRIP":"tool/toolclang/clang-r428724/bin/llvm-strip", 
