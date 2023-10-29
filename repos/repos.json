@@ -38,7 +38,7 @@
    }, 
    "AnyKernel3": { 
      "use": true, 
-     "release": ture, 
+     "release": true, 
      "repo": "https://github.com/luyanci/AnyKernel3", 
      "branch": "master" 
    } 
