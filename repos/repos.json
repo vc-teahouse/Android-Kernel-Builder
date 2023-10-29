@@ -16,7 +16,7 @@
        "binPath": ["./"] 
      }
    ], 
-   "ccache": true, 
+   "ccache": false, 
    "params": { 
      "ARCH": "arm64", 
      "CC": "clang", 
@@ -38,7 +38,7 @@
    }, 
    "AnyKernel3": { 
      "use": true, 
-     "release": false, 
+     "release": ture, 
      "repo": "https://github.com/luyanci/AnyKernel3", 
      "branch": "master" 
    } 
