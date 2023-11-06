@@ -1,7 +1,7 @@
 [
 { 
    "kernelSource": { 
-     "name": "Pure-phoenix", 
+     "name": "Paradox", 
      "repo": "https://github.com/Pzqqt/android_kernel_xiaomi_sm6150-1", 
      "branch": "Paradox-v6.5", 
      "device": "phoenix", 
