@@ -1,43 +1,41 @@
-[
-{
-  "kernelSource": {
-    "name": "PixelExperience-12",
-    "repo": "https://github.com/PixelExperience-Devices/kernel_xiaomi_phoenix",
-    "branch": "twelve",
-    "device": "phoenix",
-    "defconfig": "vendor/phoenix_defconfig"
-  },
-  "withKernelSU": true,
-  "toolchains": [
-  {
-    "repo": "https://gitlab.com/ThankYouMario/android_prebuilts_clang-standalone/",
-    "branch": "11",
-    "name": "clang",
-    "binPath": ["bin"]
-  },
-  {
-    "repo": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
-    "branch": "master",
-    "name": "gas",
-    "binPath": ["bin"]
-  }
-],
-  "ccache": false,
-"params": {
-  "ARCH": "arm64",
-  "CC": "clang",
-  "externalCommand": {
-    "CLANG_TRIPLE": "aarch64-linux-gnu-",
-    "CROSS_COMPILE": "aarch64-linux-gnu-",
-    "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
-    "CROSS_COMPILE_COMPAT": "arm-linux-gnueabi-"
-  }
-  },
-  "AnyKernel3": {
-    "use": false,
-    "release": true,
-    "repo": "https://github.com/luyanci/AnyKernel3",
-    "branch": "master"
-  }
+{ 
+   "kernelSource": { 
+     "name": "Pure-phoenix", 
+     "repo": "https://github.com/Pzqqt/android_kernel_xiaomi_sm6150-1", 
+     "branch": "Paradox-v6.5", 
+     "device": "phoenix", 
+     "defconfig": "phoenix_defconfig" 
+   }, 
+   "withKernelSU": true, 
+   "toolchains": [ 
+     {  
+        "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/clang-r498229b.tar.gz",  
+        "name": "clang",  
+        "binPath": ["bin"]  
+     } 
+   ], 
+   "ccache": false, 
+   "params": { 
+     "ARCH": "arm64", 
+     "CC": "clang/bin/clang", 
+     "externalCommand": { 
+       "CROSS_COMPILE": "aarch64-linux-gnu-", 
+       "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-", 
+       "AS": "clang/bin/llvm-as", 
+       "AR": "clang/bin/llvm-ar",  
+       "NM":"clang/bin/llvm-nm" ,  
+       "OBJCOPY":"clang/bin/llvm-objcopy",  
+       "OBJDUMP":"clang/bin/llvm-objdump",  
+       "STRIP":"clang/bin/llvm-strip",  
+       "LD":"clang/bin/ld.lld", 
+       "LTO": "thin" 
+     } 
+   }, 
+   "AnyKernel3": { 
+     "use": true, 
+     "release": true, 
+     "repo": "https://github.com/luyanci/AnyKernel3", 
+     "branch": "master" 
+   } 
 }
 ]
