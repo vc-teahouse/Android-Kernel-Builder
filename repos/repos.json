@@ -3,7 +3,7 @@
   "kernelSource": {
     "name": "PixelExperience",
     "repo": "https://github.com/PixelExperience-Devices/kernel_xiaomi_phoenix",
-    "branch": "eleven",
+    "branch": "twelve",
     "device": "phoenix",
     "defconfig": "vendor/phoenix_defconfig"
   },
@@ -34,7 +34,7 @@
   }
   },
   "AnyKernel3": {
-    "use": true,
+    "use": false,
     "release": true,
     "repo": "https://github.com/luyanci/AnyKernel3",
     "branch": "master"
