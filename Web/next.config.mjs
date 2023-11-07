@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
 }
 import remarkGfm from 'remark-gfm'

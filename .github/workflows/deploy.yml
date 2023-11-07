@@ -1,0 +1,41 @@
+name: Deploy
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+jobs:
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [latest]
+    environment:
+      name: github-pages
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies ⚡️
+        working-directory: ./Web
+        run: npm install
+
+      - name: Build 🛠️
+        working-directory: ./Web
+        run: npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./Web/out
+          branch: gh-pages
