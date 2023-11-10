@@ -6,7 +6,7 @@ env:
 on:
   workflow_dispatch:
   schedule:
-    - cron: '14 13 * * 5'
+    - cron: "14 13 * * 5"
 
 jobs:
   Set-repos:
@@ -61,7 +61,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y build-essential bc gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi libssl-dev libfl-dev
           sudo apt-get install -y curl git ftp lftp wget libarchive-tools ccache python2 python2-dev
-          sudo apt-get install -y zip unzip tar gzip bzip2 rar unrar
+          sudo apt-get install -y zip unzip tar gzip bzip2 rar unrar llvm
+          sudo apt-get install -y automake flex lzop bison gperf curl zlib1g-dev g++-multilib libxml2-utils bzip2 libbz2-dev libbz2-1.0 libghc-bzlib-dev squashfs-tools pngcrush schedtool dpkg-dev liblz4-tool make optipng maven libssl-dev pwgen libswitch-perl policycoreutils minicom libxml-sax-base-perl libxml-simple-perl bc libc6-dev-i386 lib32ncurses5-dev libx11-dev lib32z-dev libgl1-mesa-dev xsltproc unzip device-tree-compiler python2 python3
 
       - name: "🚄 Create cache key from `repos`"
         if: ${{ env.ccache == 'true' }}
@@ -80,16 +81,6 @@ jobs:
           key: ccache-${{ env.KERNEL_NAME }}-${{ steps.ccache_key.outputs.CACHE_KEY }}-${{ env.builddate }}
           restore-keys: |
             ccache-${{ env.KERNEL_NAME }}-${{ steps.ccache_key.outputs.CACHE_KEY }}-${{ env.builddate }}
-
-      - name: "⏰ Setup Anykernel3"
-        env:
-          params: "${{ toJSON(matrix.repos.AnyKernel3) }}"
-        run: |
-          ANYKERNEL_REPO=$(echo $params | jq -r ".repo")
-          ANYKERNEL_BRANCH=$(echo $params | jq -r ".branch")
-          git clone --recursive --depth=1 -j $(nproc) --branch $ANYKERNEL_BRANCH $ANYKERNEL_REPO AnyKernel3
-
-          echo "🤔 Setup Anykernel3 => ($ANYKERNEL_REPO)"
 
       - name: "🌟 Clone kernel source => (${{ env.KERNEL_REPO }})"
         run: |
@@ -182,7 +173,7 @@ jobs:
             fi
             args="$args $key=$value"
           done < <(jq -r '.externalCommand | to_entries[] | "\(.key)=\(.value)"' <<< "$params")
-        
+
           echo "🤔 $args"
           echo "ARCH=$ARCH" >> $GITHUB_OUTPUT
           echo "args=$args" >> $GITHUB_OUTPUT
@@ -264,6 +255,17 @@ jobs:
           path: ${{ env.OUT_DIR }}/arch/${{ env.arch }}/boot/dtbo.img
           if-no-files-found: ignore
           retention-days: 7
+
+      - name: "⏰ Setup Anykernel3"
+        if: ${{ env.useAnykernel == 'true' }}
+        env:
+          params: "${{ toJSON(matrix.repos.AnyKernel3) }}"
+        run: |
+          ANYKERNEL_REPO=$(echo $params | jq -r ".repo")
+          ANYKERNEL_BRANCH=$(echo $params | jq -r ".branch")
+          git clone --recursive --depth=1 -j $(nproc) --branch $ANYKERNEL_BRANCH $ANYKERNEL_REPO AnyKernel3
+
+          echo "🤔 Setup Anykernel3 => ($ANYKERNEL_REPO)"
 
       - name: "❤️ Pack AnyKernel3.zip"
         if: ${{ env.useAnykernel == 'true' }}
