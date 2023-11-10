@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 import TextField from '@mui/material/TextField';
@@ -10,7 +12,7 @@ import { Template } from '../typeConfiguration';
 //   .then(data => console.log(data))
 //   .catch(error => console.error('Error:', error));
 
-const KernelSource = ({ t, lng, updateKernelSource, template }: { t: (key: string) => string, lng: string, updateKernelSource: (value: Template) => void, template: Template }) => {
+const KernelSource = ({ updateKernelSource, template }: { updateKernelSource: (value: Template) => void, template: Template }) => {
     const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const changeId = event.target.id;
         const changeValue = event.target.value;
@@ -40,31 +42,31 @@ const KernelSource = ({ t, lng, updateKernelSource, template }: { t: (key: strin
         <div className='grid grid-cols-2 gap-4'>
             <TextField
                 variant='outlined'
-                label={t("Name")}
+                label="Name"
                 value={template.kernelSource.name}
                 id='kernelSourceName'
                 onChange={onChange} />
             <TextField
                 variant='outlined'
-                label={t("Repo")}
+                label="Repo"
                 value={template.kernelSource.repo}
                 id='kernelSourceRepo'
                 onChange={onChange} />
             <TextField
                 variant='outlined'
-                label={t("Branch")}
+                label="Branch"
                 value={template.kernelSource.branch}
                 id='kernelSourceBranch'
                 onChange={onChange} />
             <TextField
                 variant='outlined'
-                label={t("Device code")}
+                label="Device code"
                 value={template.kernelSource.device}
                 id='kernelSourceDevice'
                 onChange={onChange} />
             <TextField
                 variant='outlined'
-                label={t("Defconfig")}
+                label="Defconfig"
                 value={template.kernelSource.defconfig}
                 id='kernelSourceDefconfig'
                 onChange={onChange} />

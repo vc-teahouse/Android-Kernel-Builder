@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 
 import { Checkbox } from "@nextui-org/checkbox";
@@ -6,7 +8,7 @@ import TextField from '@mui/material/TextField';
 
 import { Template, AnyKernel3 } from "../typeConfiguration";
 
-const AnyKernel3 = ({ t, lng, updateAnykernel3, template }: { t: (key: string) => string, lng: string, updateAnykernel3: (value: Template) => void, template: Template }) => {
+const AnyKernel3 = ({ updateAnykernel3, template }: { updateAnykernel3: (value: Template) => void, template: Template }) => {
 
     const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const changeId = event.target.id;
@@ -42,23 +44,23 @@ const AnyKernel3 = ({ t, lng, updateAnykernel3, template }: { t: (key: string) =
     return (
         <div className='grid grid-cols-2 gap-x-4'>
             <Checkbox name="anykernel3Use" isSelected={template.AnyKernel3.use} onChange={onChange} >
-                {t("Use Anykernel3 pack your kernel?")}
+                Use Anykernel3 pack your kernel?
             </Checkbox>
             <Checkbox name="anykernel3Release" isSelected={template.AnyKernel3.release} onChange={onChange} >
-                {t("Publish to github release?")}
+                Publish to github release?
             </Checkbox>
             <TextField
                 id="anykernel3Repo"
                 fullWidth
                 variant="outlined"
-                label={t("Repo")}
+                label="Repo"
                 value={template.AnyKernel3.repo}
                 onChange={onChange} />
             <TextField
                 id="anykernel3Branch"
                 fullWidth
                 variant="outlined"
-                label={t("Branch")}
+                label="Branch"
                 value={template.AnyKernel3.branch}
                 onChange={onChange} />
         </div>

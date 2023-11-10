@@ -7,8 +7,7 @@ import Autocomplete from '@mui/material/Autocomplete';
 
 import { Template, Params } from '../typeConfiguration';
 
-const archOptions = ["arm64", "arm"]
-
+const archOptions = ['arm64', 'arm'];
 const externalCommandPlaceholder = `{
     "CLANG_TRIPLE": "gcc/bin/aarch64-linux-android-",
     "CROSS_COMPILE": "gcc/bin/aarch64-linux-android-",
@@ -25,7 +24,7 @@ const externalCommandPlaceholder = `{
     "LLVM_AR": "clang/bin/llvm-ar",
     "LLVM_DIS": "clang/bin/llvm-dis"
 }`
-const BuildParams = ({ t, lng, updateParams, template }: { t: (key: string) => string, lng: string, updateParams: (value: Template) => void, template: Template }) => {
+const BuildParams = ({ updateParams, template }: { updateParams: (value: Template) => void, template: Template }) => {
     const [external, setExternal] = useState("")
     const [isParse, setIsParse] = useState(false)
 
@@ -95,20 +94,18 @@ const BuildParams = ({ t, lng, updateParams, template }: { t: (key: string) => s
                         }
                         updateParams(newTemplate)
                     }}
-                    renderInput={(params) => <TextField {...params}
-                        label={t("Arch")}
-                        value={template.params.ARCH} />}
+                    renderInput={(params) => <TextField {...params} label="Arch" value={template.params.ARCH} />}
                 />
                 <TextField
                     id='paramsCC'
                     fullWidth
                     variant="outlined"
-                    label={t("Compiler")}
+                    label="Compiler"
                     value={template.params.CC}
                     onChange={onChange} />
                 <TextField
                     className='col-span-2'
-                    label={t("Edit your params")}
+                    label="Edit your params"
                     multiline
                     placeholder={externalCommandPlaceholder}
                     variant="filled"

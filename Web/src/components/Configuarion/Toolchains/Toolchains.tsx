@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useMemo } from 'react';
 
 import AddIcon from '@mui/icons-material/Add';
@@ -10,7 +12,7 @@ import DownloadToolchain from './Toolchain/downloadToolchain';
 import { Template, Toolchain } from '../typeConfiguration';
 
 
-const Toolchains = ({ t, lng, updateToolchains, template }: { t: (key: string) => string, lng: string, updateToolchains: (value: Template) => void, template: Template }) => {
+const Toolchains = ({ updateToolchains, template }: { updateToolchains: (value: Template) => void, template: Template }) => {
     // 扩展 toolchain 列表
     const addToolchain = (toolchainType: string) => {
         const repoToolchainTemplate = {
@@ -53,18 +55,18 @@ const Toolchains = ({ t, lng, updateToolchains, template }: { t: (key: string) =
         <>
             <ButtonGroup fullWidth variant="outlined">
                 <Button size='small' variant="outlined" startIcon={<AddIcon />} onClick={() => addToolchain('repo')}>
-                    {t("Add tool chain (Repo)")}
+                    Add tool chain (Repo)
                 </Button>
                 <Button size='small' variant="outlined" startIcon={<AddIcon />} onClick={() => addToolchain('download')}>
-                    {t("Add tool chain (Download)")}
+                    Add tool chain (Download)
                 </Button>
             </ButtonGroup>
 
             {template.toolchains.map((toolchain, index) => (
                 "repo" in toolchain ?
-                    <RepoToolchain key={index} toolchain={toolchain} index={index} onChange={onToolchainChange} onDelete={() => removeToolchain(index)} t={t} lng={lng} />
+                    <RepoToolchain key={index} toolchain={toolchain} index={index} onChange={onToolchainChange} onDelete={() => removeToolchain(index)} />
                     :
-                    <DownloadToolchain key={index} toolchain={toolchain} index={index} onChange={onToolchainChange} onDelete={() => removeToolchain(index)} t={t} lng={lng} />
+                    <DownloadToolchain key={index} toolchain={toolchain} index={index} onChange={onToolchainChange} onDelete={() => removeToolchain(index)} />
             ))}
         </>
     )

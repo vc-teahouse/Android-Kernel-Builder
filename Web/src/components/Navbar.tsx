@@ -1,14 +1,12 @@
-"use client";
+'use client';
 
 import React from 'react';
 import { usePathname } from "next/navigation";
 import { Navbar as NextNavBar, NavbarBrand, NavbarContent, NavbarItem, Link, Avatar } from "@nextui-org/react";
 
-import { ThemeSwitcher } from '../ThemeSwitcher/ThemeSwitcher';
-import { TFunction } from 'i18next';
+import { ThemeSwitcher } from './ThemeSwitcher/ThemeSwitcher';
 
-const NavbarBase = <KPrefix = undefined>({ t, lng, setMuiMode }: { t: TFunction<string, KPrefix>, lng: string, setMuiMode: (value: 'light' | 'dark') => void }) => {
-
+const Navbar = ({ setMuiMode }: { setMuiMode: (value: 'light' | 'dark') => void }) => {
     // 获取当前网页路径
     const pathname = usePathname();
 
@@ -42,13 +40,13 @@ const NavbarBase = <KPrefix = undefined>({ t, lng, setMuiMode }: { t: TFunction<
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem data-active={includes(pathname, "Config")}>
-                    <Link color="foreground" id="Config" href={`/${lng}/Config`}>
-                        {t("Config")}
+                    <Link color="foreground" id="Config" href="/Config">
+                        Config
                     </Link>
                 </NavbarItem>
                 <NavbarItem data-active={includes(pathname, "Docs")}>
-                    <Link color="foreground" id="Docs" href={`/${lng}/Docs`}>
-                        {t("Docs")}
+                    <Link color="foreground" id="Docs" href="/Docs">
+                        Docs
                     </Link>
                 </NavbarItem>
             </NavbarContent>
@@ -71,4 +69,4 @@ const NavbarBase = <KPrefix = undefined>({ t, lng, setMuiMode }: { t: TFunction<
     )
 };
 
-export default NavbarBase;
+export default Navbar;

@@ -1,11 +1,13 @@
 // app/components/ThemeSwitcher.tsx
+"use client";
+
 import { useEffect, useState } from "react";
 
 import { useTheme as useNextTheme } from "next-themes";
 
 import IconButton from '@mui/material/IconButton';
-import { SunIcon } from "@/app/[lng]/Components/Icons/SunIcon";
-import { MoonIcon } from "@/app/[lng]/Components/Icons/MoonIcon";
+import { SunIcon } from "@/icons/SunIcon";
+import { MoonIcon } from "@/icons/MoonIcon";
 
 
 export function ThemeSwitcher({ setMuiMode }: { setMuiMode: (value: 'light' | 'dark') => void }) {

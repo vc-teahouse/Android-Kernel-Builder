@@ -1,4 +1,5 @@
-'use client';
+"use client";
+
 import React, { useState } from "react";
 
 // NextUI Provider
@@ -9,10 +10,10 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { ThemeProvider as MuiThemeProvider, createTheme } from '@mui/material/styles';
 
 // My components
-import { Navbar } from "./Components/Navbar/client";
-import Footer from '@/app/[lng]/Components/Footer'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
-export function Providers({ lng, children }: { lng: string, children: React.ReactNode }) {
+export function Providers({ children }: { children: React.ReactNode }) {
     const [muiMode, setMuiMode] = useState<'light' | 'dark'>('dark');
     const muiTheme = React.useMemo(
         () =>
@@ -27,9 +28,9 @@ export function Providers({ lng, children }: { lng: string, children: React.Reac
         <NextUIProvider>
             <NextThemesProvider attribute="class" defaultTheme="dark">
                 <MuiThemeProvider theme={muiTheme}>
-                    <Navbar lng={lng} setMuiMode={setMuiMode} />
+                    <Navbar setMuiMode={setMuiMode} />
                     {children}
-                    < Footer />
+                    <Footer />
                 </MuiThemeProvider>
             </NextThemesProvider>
         </NextUIProvider>

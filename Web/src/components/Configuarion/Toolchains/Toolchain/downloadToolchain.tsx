@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 import { Box } from '@mui/system';
@@ -13,9 +15,9 @@ import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import TextField from '@mui/material/TextField';
 
-import { Toolchain, RepoToolchain } from '../../typeConfiguration';
+import { Toolchain, DownloadToolchain } from '../../typeConfiguration';
 
-function RepoToolchain({ t, lng, toolchain, index, onChange, onDelete }: { t: (key: string) => string, lng: string, toolchain: RepoToolchain, index: number, onChange: (index: number, toolchain: Toolchain) => void, onDelete: () => void }) {
+function DownloadToolchain({ toolchain, index, onChange, onDelete }: { toolchain: DownloadToolchain, index: number, onChange: (index: number, toolchain: Toolchain) => void, onDelete: () => void }) {
 
     function onInputChange(event: React.ChangeEvent<HTMLInputElement>) {
         const changeId = event.target.id;
@@ -24,11 +26,8 @@ function RepoToolchain({ t, lng, toolchain, index, onChange, onDelete }: { t: (k
             case 'repoToolchianName':
                 onChange(index, { ...toolchain, name: changeValue })
                 break;
-            case 'repoToolchianRepo':
-                onChange(index, { ...toolchain, repo: changeValue })
-                break;
-            case 'repoToolchianBranch':
-                onChange(index, { ...toolchain, branch: changeValue })
+            case 'repoToolchianUrl':
+                onChange(index, { ...toolchain, url: changeValue })
                 break;
             default:
                 break;
@@ -61,25 +60,20 @@ function RepoToolchain({ t, lng, toolchain, index, onChange, onDelete }: { t: (k
                     </div>
                 </Grid>
                 <Grid xs={11}>
-                    <div className='grid grid-cols-3 gap-x-4'>
+                    <div className='grid grid-cols-2 gap-x-4'>
                         <TextField
-                            label={t("Name")}
+                            label="Name"
                             value={toolchain.name}
                             id='repoToolchianName'
                             onChange={onInputChange} />
                         <TextField
-                            label={t("Repo")}
-                            value={toolchain.repo}
-                            id='repoToolchianRepo'
-                            onChange={onInputChange} />
-                        <TextField
-                            label={t("Branch")}
-                            value={toolchain.branch}
-                            id='repoToolchianBranch'
+                            label="Url"
+                            value={toolchain.url}
+                            id='repoToolchianUrl'
                             onChange={onInputChange} />
                     </div>
                     <Button fullWidth size='small' variant="outlined" startIcon={<AddIcon />} onClick={addBinPathInput}>
-                        {t("Add bin path")}
+                        Add bin path
                     </Button>
                     <div className='grid grid-cols-2 gap-x-4'>
                         {
@@ -90,12 +84,12 @@ function RepoToolchain({ t, lng, toolchain, index, onChange, onDelete }: { t: (k
                                         sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: '100%' }}
                                     >
                                         <div>
-                                            {t("binPath_") + (indexBinpath + 1)}
+                                            {"binPath_" + (indexBinpath + 1)}
                                         </div>
 
                                         <InputBase
                                             sx={{ ml: 1, flex: 1 }}
-                                            placeholder={t("Add your bin path")}
+                                            placeholder="Add your bin path"
                                             value={input}
                                             onChange={(event: React.ChangeEvent<HTMLInputElement>) => onBinPathChange(indexBinpath, event)} />
                                         <IconButton color="primary" sx={{ p: '10px' }} aria-label="directions" onClick={() => removeBinPathInput(indexBinpath)}>
@@ -103,12 +97,13 @@ function RepoToolchain({ t, lng, toolchain, index, onChange, onDelete }: { t: (k
                                         </IconButton>
                                     </Paper>
                                 </div>
-                            ))}
+                            ))
+                        }
                     </div>
                 </Grid>
             </Grid>
-        </Box >
+        </Box>
     );
 }
 
-export default RepoToolchain;
+export default DownloadToolchain;
