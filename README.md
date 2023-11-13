@@ -1,5 +1,5 @@
 # 紧急提示
-DogdayAndroid/Android-Kernel-Builder(即原版项目)突然消失，现在复刻指向的是个错误action
+DogWayDroid/Android-Kernel-Builder(即原版项目)突然消失(实际上是作者删仓库并改名了，现在复刻指向的是个错误action)
 
 # Android-Kernel-Builder
  Build for Redmi K30 4G /Poco X2(phoenix/phoenixin) kernels by github Action. 
