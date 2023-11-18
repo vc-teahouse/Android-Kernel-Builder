@@ -1,4 +1,4 @@
-# 紧急提示
+# 提示
 DogdayAndroid/Android-Kernel-Builder(即原版项目)突然消失(实际上是作者误删仓库并重新创建了，现在复刻指向的是错的)
 
 在发行版20231114.77后，本仓库将会转移到[luyanci/Android-Builder](https://github.com/luyanci/Android-Builder/)这个新仓库继续编译(新的action支持了lxc内核构建，到时会有的)
