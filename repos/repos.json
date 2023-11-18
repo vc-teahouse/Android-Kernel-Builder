@@ -4,8 +4,8 @@
      "name": "K60", 
      "repo": "https://github.com/Pzqqt/android_kernel_xiaomi_sm6150-1", 
      "branch": "Paradox-v6.5", 
-     "device": "phoenix", 
-     "defconfig": "phoenix_defconfig" 
+     "device": "mondrian", 
+     "defconfig": "vendor/mondrian_defconfig" 
    }, 
    "withKernelSU": true, 
    "toolchains": [ 
