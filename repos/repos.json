@@ -2,10 +2,10 @@
 { 
    "kernelSource": { 
      "name": "K60", 
-     "repo": "https://github.com/luyanci/android_kernel_xiaomi_sm8475", 
-     "branch": "luyanci-patch-1", 
+     "repo": "https://github.com/vc-teshouse/android_kernel_xiaomi_sm8475", 
+     "branch": "staging", 
      "device": "mondrian", 
-     "defconfig": "vendor/mondrian_defconfig" 
+     "defconfig": "vendor/mondrian_defconfig_fix" 
    }, 
    "withKernelSU": true, 
    "toolchains": [ 
