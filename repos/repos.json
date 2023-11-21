@@ -5,7 +5,7 @@
      "repo": "https://github.com/vc-teahouse/android_kernel_xiaomi_sm8475", 
      "branch": "staging", 
      "device": "mondrian", 
-     "defconfig": "vendor/mondrian_defconfig_fix" 
+     "defconfig": "vendor/mondrian_defconfig" 
    }, 
    "withKernelSU": true, 
    "toolchains": [ 
