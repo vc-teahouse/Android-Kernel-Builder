@@ -19,7 +19,7 @@
    "ccache": false, 
    "params": { 
      "ARCH": "arm64"
-     "externalCommand": { 
+     "externalCommand": {
        "CROSS_COMPILE":"gcc/bin/aarch64-linux-android-"
      } 
    }, 
