@@ -11,25 +11,16 @@
    "toolchains": [ 
      {  
         "repo": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9",  
-        "name": "clang",  
+        "branch": "marshmallow-release"
+        "name": "gcc",  
         "binPath": ["bin"]  
      } 
    ], 
    "ccache": false, 
    "params": { 
-     "ARCH": "arm64", 
-     "CC": "clang/bin/clang", 
+     "ARCH": "arm64"
      "externalCommand": { 
-       "CROSS_COMPILE": "aarch64-linux-gnu-", 
-       "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-", 
-       "AS": "clang/bin/llvm-as", 
-       "AR": "clang/bin/llvm-ar",  
-       "NM":"clang/bin/llvm-nm" ,  
-       "OBJCOPY":"clang/bin/llvm-objcopy",  
-       "OBJDUMP":"clang/bin/llvm-objdump",  
-       "STRIP":"clang/bin/llvm-strip",  
-       "LD":"clang/bin/ld.lld", 
-       "LTO": "thin" 
+       "CROSS_COMPILE": "gcc/bin/aarch64-linux-android-"
      } 
    }, 
    "AnyKernel3": { 
