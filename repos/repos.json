@@ -14,11 +14,17 @@
         "branch": "marshmallow-release",
         "name": "gcc",  
         "binPath": ["bin"]  
+     },
+     {  
+        "url": "https://github.com/ZyCromerZ/Clang/releases/download/10.0.1-20220724-release/Clang-10.0.1-20220724.tar.gz",  
+        "name": "clang",  
+        "binPath": ["bin"]  
      } 
    ], 
    "ccache": false, 
    "params": { 
      "ARCH": "arm64",
+     "CC": "clang",
      "externalCommand": {
        "CROSS_COMPILE":"gcc/bin/aarch64-linux-android-"
      } 
