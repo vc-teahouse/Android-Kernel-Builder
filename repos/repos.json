@@ -20,7 +20,7 @@
    "params": { 
      "ARCH": "arm64"
      "externalCommand": { 
-       "CROSS_COMPILE": "gcc/bin/aarch64-linux-android-"
+       "CROSS_COMPILE":"gcc/bin/aarch64-linux-android-"
      } 
    }, 
    "AnyKernel3": { 
