@@ -10,7 +10,7 @@
    "withKernelSU": true, 
    "toolchains": [ 
      {  
-        "url": "https://github.com/ZyCromerZ/Clang/releases/download/17.0.0-20230725-release/Clang-17.0.0-20230725.tar.gz",  
+        "repo": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9",  
         "name": "clang",  
         "binPath": ["bin"]  
      } 
