@@ -1,11 +1,11 @@
 [
   { 
    "kernelSource": { 
-     "name": "Pure-phoenix", 
-     "repo": "https://github.com/Pzqqt/android_kernel_xiaomi_sm6150-1", 
-     "branch": "pure-phoenix", 
-     "device": "phoenix", 
-     "defconfig": "phoenix_defconfig" 
+     "name": "test", 
+     "repo": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource", 
+     "branch": "olive-q-oss", 
+     "device": "olive", 
+     "defconfig": "olive_defconfig" 
    }, 
    "withKernelSU": true, 
    "toolchains": [ 
