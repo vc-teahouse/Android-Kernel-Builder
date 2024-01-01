@@ -1,36 +1,40 @@
 [
-{ 
+  { 
    "kernelSource": { 
-     "name": "test", 
-     "repo": "https://github.com/Ruben1863/android_kernel_xiaomi_nikel", 
-     "branch": "master", 
-     "device": "nikel", 
-     "defconfig": "nikel_defconfig" 
+     "name": "Pure-phoenix", 
+     "repo": "https://github.com/Pzqqt/android_kernel_xiaomi_sm6150-1", 
+     "branch": "pure-phoenix", 
+     "device": "phoenix", 
+     "defconfig": "phoenix_defconfig" 
    }, 
-   "withKernelSU": false, 
+   "withKernelSU": true, 
    "toolchains": [ 
      {  
-        "repo": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9",  
-        "branch": "marshmallow-release",
-        "name": "gcc",  
-        "binPath": ["bin"]  
-     },
-     {  
-        "url": "https://github.com/ZyCromerZ/Clang/releases/download/10.0.1-20220724-release/Clang-10.0.1-20220724.tar.gz",  
+        "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/clang-r498229b.tar.gz",  
         "name": "clang",  
         "binPath": ["bin"]  
      } 
    ], 
    "ccache": false, 
    "params": { 
-     "ARCH": "arm64",
-     "externalCommand": {
-       "CROSS_COMPILE":"aarch64-linux-android-"
+     "ARCH": "arm64", 
+     "CC": "clang/bin/clang", 
+     "externalCommand": { 
+       "CROSS_COMPILE": "aarch64-linux-gnu-", 
+       "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-", 
+       "AS": "clang/bin/llvm-as", 
+       "AR": "clang/bin/llvm-ar",  
+       "NM":"clang/bin/llvm-nm" ,  
+       "OBJCOPY":"clang/bin/llvm-objcopy",  
+       "OBJDUMP":"clang/bin/llvm-objdump",  
+       "STRIP":"clang/bin/llvm-strip",  
+       "LD":"clang/bin/ld.lld", 
+       "LTO": "thin" 
      } 
    }, 
    "AnyKernel3": { 
      "use": false, 
-     "release": false, 
+     "release": true, 
      "repo": "https://github.com/luyanci/AnyKernel3", 
      "branch": "master" 
    } 
