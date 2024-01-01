@@ -9,11 +9,12 @@
    }, 
    "withKernelSU": true, 
    "toolchains": [ 
-     {  
-        "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/clang-r498229b.tar.gz",  
-        "name": "clang",  
-        "binPath": ["bin"]  
-     } 
+       {
+    "repo": "https://gitlab.com/ThankYouMario/android_prebuilts_clang-standalone/",
+    "branch": "11",
+    "name": "clang",
+    "binPath": ["bin"]
+  }
    ], 
    "ccache": false, 
    "params": { 
