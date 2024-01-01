@@ -25,7 +25,7 @@
        "CROSS_COMPILE_ARM32": "tools/bin/arm-linux-gnueabi-", 
       "CLANG_TRIPLE": "tools/bin/aarch64-linux-gnu-",
        "AS": "tools/bin/llvm-as", 
-       "AR": "tools/bin/llvm-ar",  
+       "AR": "llvm-ar",  
        "NM":"tools/bin/llvm-nm" ,  
        "OBJCOPY":"tools/bin/llvm-objcopy",  
        "OBJDUMP":"tools/bin/llvm-objdump",  
