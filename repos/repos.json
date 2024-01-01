@@ -30,7 +30,7 @@
        "OBJCOPY":"llvm-objcopy",  
        "OBJDUMP":"llvm-objdump",  
        "STRIP":"llvm-strip",  
-       "LD":"ld.lld"
+       "LD":"tools/bin/ld.lld"
      } 
    }, 
    "AnyKernel3": { 
