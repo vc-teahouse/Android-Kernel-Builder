@@ -13,7 +13,7 @@
         "repo": "https://gitlab.com/Jprimero15/lolz_clang.git",  
         "branch": "backup",
         "name": "clang",  
-        "binPath": ["bin"]  
+        "binPath": [""]  
      } 
    ], 
    "ccache": false, 
