@@ -19,7 +19,7 @@
    "ccache": false, 
    "params": { 
      "ARCH": "arm64", 
-     "CC": "clang", 
+     "CC": "tools/bin/clang", 
      "externalCommand": { 
        "CROSS_COMPILE": "aarch64-linux-gnu-", 
        "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-", 
