@@ -13,7 +13,7 @@
         "repo": "https://gitlab.com/Jprimero15/lolz_clang.git",  
         "branch": "main",
         "name": "tools",  
-        "binPath": ["./"]  
+        "binPath": ["bin"]  
      },
      {  
         "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/clang-r498229b.tar.gz",  
