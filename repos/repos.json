@@ -14,23 +14,28 @@
         "branch": "main",
         "name": "tools",  
         "binPath": ["./"]  
+     },
+     {  
+        "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/clang-r498229b.tar.gz",  
+        "name": "clang",  
+        "binPath": ["bin"]  
      } 
    ], 
    "ccache": false, 
    "params": { 
      "ARCH": "arm64", 
-     "CC": "tools/bin/clang", 
+     "CC": "clang/bin/clang", 
      "externalCommand": { 
-       "CROSS_COMPILE": "aarch64-linux-gnu-", 
-       "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-", 
-      "CLANG_TRIPLE": "aarch64-linux-gnu-",
-       "AS": "tools/bin/llvm-as", 
-       "AR": "tools/bin/llvm-ar",  
-       "NM":"tools/bin/llvm-nm" ,  
-       "OBJCOPY":"tools/bin/llvm-objcopy",  
-       "OBJDUMP":"tools/bin/llvm-objdump",  
-       "STRIP":"tools/bin/llvm-strip",  
-       "LD":"tools/bin/ld.lld"
+       "CROSS_COMPILE": "tools/bin/aarch64-linux-gnu-", 
+       "CROSS_COMPILE_ARM32": "tools/bin/arm-linux-gnueabi-", 
+      "CLANG_TRIPLE": "tools/bin/aarch64-linux-gnu-",
+       "AS": "clang/bin/llvm-as", 
+       "AR": "clang/bin/llvm-ar",  
+       "NM":"clang/bin/llvm-nm" ,  
+       "OBJCOPY":"clang/bin/llvm-objcopy",  
+       "OBJDUMP":"clang/bin/llvm-objdump",  
+       "STRIP":"clang/bin/llvm-strip",  
+       "LD":"clang/bin/ld.lld"
      } 
    }, 
    "AnyKernel3": { 
