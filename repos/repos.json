@@ -29,8 +29,7 @@
        "OBJCOPY":"clang/bin/llvm-objcopy",  
        "OBJDUMP":"clang/bin/llvm-objdump",  
        "STRIP":"clang/bin/llvm-strip",  
-       "LD":"clang/bin/ld.lld", 
-       "FLTO": "thin" 
+       "LD":"clang/bin/ld.lld"
      } 
    }, 
    "AnyKernel3": { 
