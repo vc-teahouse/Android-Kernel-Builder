@@ -3,9 +3,9 @@
    "kernelSource": { 
      "name": "MIUI", 
      "repo": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource", 
-     "branch": "phoenix-r-oss", 
-     "device": "phoenix", 
-     "defconfig": "vendor/phoenix_user_defconfig" 
+     "branch": "alioth-r-oss", 
+     "device": "umi", 
+     "defconfig": "vendor/umi_user_defconfig" 
    }, 
    "withKernelSU": true, 
    "toolchains": [ 
