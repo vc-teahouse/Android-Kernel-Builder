@@ -3,9 +3,9 @@
    "kernelSource": { 
      "name": "MIUI", 
      "repo": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource", 
-     "branch": "nabu-r-oss", 
-     "device": "nabu", 
-     "defconfig": "vendor/nabu_user_defconfig" 
+     "branch": "sweet-r-oss", 
+     "device": "sweet", 
+     "defconfig": "vendor/sweet_user_defconfig" 
    }, 
    "withKernelSU": true, 
    "toolchains": [ 
